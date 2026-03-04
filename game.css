@@ -1,0 +1,30 @@
+.gameBody{
+    height: 100%;
+    background-color: rgb(26, 14, 14);
+}
+.head{
+   text-align: center;
+   color: yellow;
+}
+.gamecard{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(135, 242, 229);
+    
+}
+.buttonDiv{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+#result,#fail{
+    padding: 20px;
+
+}
+#abtn{
+    margin-top: 100px;
+}
