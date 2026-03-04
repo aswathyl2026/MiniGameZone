@@ -12,13 +12,49 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
       }
-    </style>
+       
+     body {
+    margin: 0;
+    background: black;
+    overflow: scroll;
+    }
+
+    .firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+     }
+
+@keyframes explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    color: white;
+    font-family: Arial;
+}
+
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-success ">
   <div class="container-fluid">
-    <a class="navbar-brand text-warning fw-bolder" href="#">GameZone</a>
+    <a class="navbar-brand text-warning fw-bolder" href="index.html">GameZone</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ">
         <li class="nav-item">
@@ -35,7 +71,7 @@
   </div>
 </nav> 
 <div class="scorebody">
-<h2 id="scoreResult">yuiokp </h2>
+<h2 class="text-light" id="scoreResult">yuiokp </h2>
 
 <button onclick="reset()" class="btn btn-primary">Reset Score</button>
 </div>

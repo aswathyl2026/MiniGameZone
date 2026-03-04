@@ -1,9 +1,49 @@
-const scoreResult=document.getElementById("scoreResult")
-let finalScore=localStorage.getItem("finalScore")
-scoreResult.innerText=`Score is : ${finalScore}`
-function reset(){
-scoreResult.innerText="Score is :"
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fireworks</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
 }
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    color: white;
+    font-family: Arial;
+}
+</style>
+</head>
+<body>
+
+<h1>🎉 You Win! 🎉</h1>
+
+<script>
 function createFirework(x, y) {
     for (let i = 0; i < 30; i++) {
         let spark = document.createElement("div");
@@ -38,3 +78,7 @@ setInterval(() => {
     let y = Math.random() * window.innerHeight / 2;
     createFirework(x, y);
 }, 800);
+</script>
+
+</body>
+</html>
